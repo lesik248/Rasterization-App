@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasterization App</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body>
+    <div class="canvas-container">
+        <h2>Rasterization App</h2>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <div class="controls">
+            <div class="input-group">
+                <label>Starting Point:</label>
+                <input type="number" id="x1" value="-10" placeholder="x1">
+                <input type="number" id="y1" value="-10" placeholder="y1">
+                <label>Ending Point:</label>
+                <input type="number" id="x2" value="10" placeholder="x2">
+                <input type="number" id="y2" value="10" placeholder="y2">
+            </div>
+            <div class="input-group">
+                <label>Circle Radius:</label>
+                <input type="number" id="radius" value="8" placeholder="radius">
+            </div>
+           <div class="algorithm-buttons">
+                <button onclick="drawStepByStep()">Step-by-Step</button>
+                <button onclick="drawDDA()">DDA</button>
+                <button onclick="drawBresenham()">Bresenham (Line)</button>
+                <button onclick="drawBresenhamCircle()">Bresenham (Circle)</button>
+            </div>
+            <div class="input-group">
+                <label>Scale:</label>
+                <input type="range" id="scale" min="5" max="50" value="20" step="0.1" onchange="updateScale()">
+                <span id="scaleValue">Scale: 20.0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>
